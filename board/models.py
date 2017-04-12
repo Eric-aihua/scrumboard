@@ -7,7 +7,7 @@ from django.conf import settings
 
 
 class Sprint(models.Model):
-    name = models.CharField(max_length=100, blank=True, default='')
+    name = models.CharField(max_length=100, blank=True, default='',unique=True)
     description = models.TextField(blank=True, default='')
     end = models.DateField(unique=True)
 
